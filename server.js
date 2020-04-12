@@ -21,7 +21,8 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname)));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    console.log("am I sending the file");
+    //res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.get('/mews', (req, res) => {
