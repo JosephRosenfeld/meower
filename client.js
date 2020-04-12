@@ -4,6 +4,8 @@ const loadingGif = document.querySelector('.loading');
 const mewsEl = document.querySelector('.mews');
 const API_URL = "/mews";
 
+console.log('test');
+
 listAllMews();
 
 form.addEventListener('submit', (event) => {
