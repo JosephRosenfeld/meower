@@ -2,9 +2,10 @@
 const form = document.querySelector('form');
 const loadingGif = document.querySelector('.loading');
 const mewsEl = document.querySelector('.mews');
-const API_URL = "/mews";
 
-console.log('test');
+console.log(window.location.href);
+const API_URL = window.location.href + "/mews";
+console.log(API_URL);
 
 listAllMews();
 
@@ -41,6 +42,7 @@ form.addEventListener('submit', (event) => {
 
 function listAllMews() {
     mewsEl.innerHTML = '';
+    console.log('before fetch');
     fetch(API_URL)
         .then(response => response.json())
         .then(mews => {
