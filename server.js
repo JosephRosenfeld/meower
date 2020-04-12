@@ -15,6 +15,7 @@ const apiLimiter = rateLimit({
 });
 
 const PORT = process.env.port || 5000;
+console.log(process.env.port);
 console.log(PORT);
 
 app.use(cors());
