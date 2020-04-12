@@ -58,6 +58,6 @@ app.post('/mews', (req, res) => {
     }
 });
 
-app.listen(5000, () => {
+app.listen(() => {
     console.log("listening on local host 5000");
 });
