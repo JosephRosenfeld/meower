@@ -4,7 +4,7 @@ const loadingGif = document.querySelector('.loading');
 const mewsEl = document.querySelector('.mews');
 
 console.log(window.location.href);
-const API_URL = window.location.href + "/mews";
+const API_URL = window.location.href + "mews";
 console.log(API_URL);
 
 listAllMews();
