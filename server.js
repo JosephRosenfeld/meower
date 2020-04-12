@@ -6,7 +6,16 @@ const rateLimit = require("express-rate-limit");
 
 const app = express();
 
-const db = monk(process.env.MONGO_URI || 'localhost/meower');
+const port = process.env.PORT || 5000;
+
+if (process.env.PORT) {
+    const db = monk(process.env.MONGO_URI);
+} else {
+    const db = monk('localhost/meower');
+}
+
+console.log({port,db});
+
 const mews = db.get('mews');
 
 const apiLimiter = rateLimit({
@@ -14,7 +23,7 @@ const apiLimiter = rateLimit({
     max: 1
 });
 
-const port = process.env.PORT || 5000;
+
 
 app.use(cors());
 app.use(express.json());

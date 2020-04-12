@@ -46,6 +46,7 @@ function listAllMews() {
     fetch(API_URL)
         .then(response => response.json())
         .then(mews => {
+            console.log(mews);
             mews.reverse();
             mews.forEach(mew => {
                 const div = document.createElement('div');
