@@ -14,10 +14,7 @@ const apiLimiter = rateLimit({
     max: 1
 });
 
-const thePort = process.env.PORT || 5000;
-console.log(process.env.PORT);
-console.log(process.env.port);
-console.log(thePort);
+const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
@@ -63,6 +60,6 @@ app.post('/mews', (req, res) => {
     }
 });
 
-app.listen(thePort, () => {
-    console.log("listening on local host 5000");
+app.listen(port, () => {
+    console.log("listening on port" + port);
 });
