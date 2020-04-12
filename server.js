@@ -26,11 +26,17 @@ app.get('/', (req, res) => {
 });
 
 app.get('/mews', (req, res) => {
+    console.log('we hit the mews endpoint');
+    res.json(["test"]);
+    /*
+
     mews
         .find()
         .then(mews => {
             res.json(mews);
         });
+
+    */
 });
 
 app.use(apiLimiter);
