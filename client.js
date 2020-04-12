@@ -2,7 +2,7 @@
 const form = document.querySelector('form');
 const loadingGif = document.querySelector('.loading');
 const mewsEl = document.querySelector('.mews');
-const API_URL = "http://localhost:5000/mews";
+const API_URL = "/mews";
 
 listAllMews();
 
